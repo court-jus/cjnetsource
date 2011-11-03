@@ -1,6 +1,6 @@
 mode: learning
 media_root: media
-media_url: media # will use relative path, prepend "/" for absolute path
+media_url: /media # will use relative path, prepend "/" for absolute path
 template: hyde.ext.templates.jinja.Jinja2Template
 plugins:
     - hyde.ext.plugins.meta.MetaPlugin
@@ -16,11 +16,11 @@ context:
             url: "http://ringce.com/hyde"
         menu:
           - title: Home
-            url: index.html
+            url: /index.html
           - title: Gate
-            url: gate.html
+            url: /Gate/
           - title: Netblocks
-            url: netblocks.html
+            url: /netblocks.html
         socialmenu:
           - title: Twitter
             url: "http://twitter.com/#!/court_jus"
