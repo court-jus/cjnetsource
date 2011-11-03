@@ -1,0 +1,45 @@
+mode: learning
+media_root: media
+media_url: media # will use relative path, prepend "/" for absolute path
+template: hyde.ext.templates.jinja.Jinja2Template
+plugins:
+    - hyde.ext.plugins.meta.MetaPlugin
+    - hyde.ext.plugins.auto_extend.AutoExtendPlugin
+    - hyde.ext.plugins.syntext.SyntextPlugin
+context:
+    data:
+        author:
+            name: Ghislain Lévêque
+            url: "http://court-jus.net"
+        engine:
+            name: Hyde
+            url: "http://ringce.com/hyde"
+        menu:
+          - title: Home
+            url: index.html
+          - title: Gate
+            url: gate.html
+          - title: Netblocks
+            url: netblocks.html
+        socialmenu:
+          - title: Twitter
+            url: "http://twitter.com/#!/court_jus"
+            img: img/twitter-logo.png
+          - title: Google +
+            url: https://plus.google.com/u/0/112246283262352600224/posts
+            img: img/google-plus-logo.png
+          - title: GitHub
+            url: https://github.com/court-jus
+            img: img/github-logo.png
+          - title: Pearltrees
+            url: http://www.pearltrees.com/court_jus
+            img: img/pearltree-logo.png
+          - title: YouTube
+            url: http://www.youtube.com/user/31court31jus31
+            img: img/youtube-logo.png
+          - title: Klout
+            url: http://klout.com/#/court_jus
+            img: img/klout-logo.jpg
+          - title: myOpenId
+            url: http://courtjus.myopenid.com/
+            img: img/myopenid-logo.png

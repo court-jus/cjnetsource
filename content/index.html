@@ -1,0 +1,21 @@
+{# Use base.j2 template as a base and only provide values for placeholders
+   in this file.
+#}
+{% extends "base.j2" %}
+
+{# Markdown main content block. #}
+{% block content %}
+What is this all about
+======================
+
+This is my personal website. This is where I store some of my stuff.
+
+  * [Stuff, crap and mess][stuff]
+  * [Links, stuff I like][links]
+  * [Stuff I do][do]
+
+[stuff]: stuff-index.html
+[links]: links-index.html
+[like]: like-index.html
+[do]: do-index.html
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.j2" %}
+
+{% block content %}
+NetBlocks
+=========
+
+About
+-----
+
+Netblocks is a FOSS game developped in [python][python] with the [pygame][pygame] hardware abstraction layer.
+
+Download
+--------
+
+[Current version][downloadcurrent]
+
+Goal
+----
+
+Like in Tetris, it's not possible to win. So play until you lose. You lose when one of the columns fills.
+
+Rules
+-----
+
+You are presented a board with cells. Cells can be empty : <img src="{{ media_url('img/netblocks/emptycell.png') }}" class="inlineimage" />, contain only wires : <img src="{{ media_url('img/netblocks/wiredcell.png') }}" class="inlineimage" /> or contain wires and a blue "source" : <img src="{{ media_url('img/netblocks/sourcedcell.png') }}" class="inlineimage" />.
+
+To remove cells, you have to connect them with a source. Higher levels require you to connect more cells before being allowed to remove them.
+
+From time to time, a new wave of random cells appears.
+
+Controls
+--------
+
+* Left-clic : rotate cell anti-clockwise
+* Right-clic : rotate cell clockwise
+* Middle-clic : remove connected cells if allowed
+* Space : require a new wave without waiting
+
+Visual
+------
+
+<a href="https://picasaweb.google.com/lh/photo/TS-5o08__YVUfceFceKnFg?feat=embedwebsite"><img src="https://lh4.googleusercontent.com/-WOV4jYXfUzc/TrJlo5NS_eI/AAAAAAAAAe0/QwnEMmfNAXw/s288/CaptureNetblocks.png" height="216" width="288" /></a>
+
+[downloadcurrent]: /files/NetBlocks-current.tgz
+[python]: http://www.python.org
+[pygame]: http://www.pygame.org
+{% endblock %}

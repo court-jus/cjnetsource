@@ -1,0 +1,19 @@
+{% macro render_main_menu() -%}
+<ul>
+{% for menu_item in menu -%}
+    <li><a {% if menu_item.url == resource.url %}class="selected"{% endif %} href="{{ menu_item.url }}">{{ menu_item.title }}</a></li>
+{%- endfor %}
+</ul>
+{%- endmacro %}
+
+{% macro render_social() -%}
+    <ul>
+        {% for menu_item in socialmenu -%}
+            <li>
+                <a href="{{ menu_item.url }}" title="{{ menu_item.title }}">
+                    <img src="{{ media_url(menu_item.img) }}" alt="{{ menu_item.title }}" />
+                </a>
+            </li>
+        {%- endfor %}
+    </ul>
+{%- endmacro %}

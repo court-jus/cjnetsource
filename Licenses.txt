@@ -1,0 +1,2 @@
+bottles.jpg : http://www.flickr.com/photos/74449165@N00/151463268 (http://creativecommons.org/licenses/by-nc-sa/2.0/)
+mountain.jpg : http://www.flickr.com/photos/maurice_perry/2880948929/in/photostream/ (http://creativecommons.org/licenses/by-nc-sa/2.0/)
