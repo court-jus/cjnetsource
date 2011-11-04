@@ -1,3 +1,0 @@
-extends: base.j2
-title_ending: " - Blog"
-default_block: content
