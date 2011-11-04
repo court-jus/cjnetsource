@@ -1,0 +1,36 @@
+---
+tags:
+    - blog
+    - test
+---
+
+Blog
+====
+
+Namého
+
+-----
+
+{% for res in resource.node.walk_resources_sorted_by_date() %}
+  * {{ res.meta.date }} - [{{ res.slug|capitalize|replace("-"," ") }}]({{ res.full_url }}) \
+    ({{ res.name }})
+{% if res.meta.tags %}
+  * <span class="tags">tags:
+    {% for tag in res.meta.tags %}
+    {{tag}}{% if tag != res.meta.tags[-1] %},{% endif %}
+    {% endfor %}
+    </span>
+{% endif %}
+{% endfor %}
+
+-----
+
+{% for grp, res_walker in site.content.walk_project_groups() %}
+*{{ grp.description }}*
+
+{% for res in res_walker %}
+  * [{{ res.slug|capitalize|replace('-', ' ') }}]({{ res.full_url }}) \
+    ({{ res.name }})
+{% endfor %}
+
+{% endfor %}

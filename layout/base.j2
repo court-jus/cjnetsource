@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <link href="http://fonts.googleapis.com/css?family=Anton" rel="stylesheet" type="text/css">
-        <title>court-jus.net{{ resource.meta.title_ending }}</title>
+        <title>{{ website.title }}{{ resource.meta.title_ending }}</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="{{ media_url('css/style.css') }}">
         <!--[if lt IE 9]>
@@ -17,6 +17,16 @@
             <!-- <h2>Know your tool</h2> -->
             </hgroup>
         </header>
+        <div id="debug">
+            <pre>
+            SITE :
+            {{ site }}
+            NODE :
+            {{ node }}
+            RES :
+            {{ resource }}
+            </pre>
+        </div>
         <div id="social">
             {% from "macros.j2" import render_social with context %}
             {{ render_social() }}
@@ -40,7 +50,8 @@
         </article>
         <aside>
             <p>Created by <a href="{{ author.url}}">{{ author.name}}</a>
-             - powered by <a href="{{ engine.url}}">{{ engine.name}}</a></p>
+             - powered by <a href="{{ engine.url}}">{{ engine.name}}</a>
+             - {{ website.version }}</p>
         </aside>
     </body>
 </html>

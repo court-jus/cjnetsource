@@ -6,8 +6,40 @@ plugins:
     - hyde.ext.plugins.meta.MetaPlugin
     - hyde.ext.plugins.auto_extend.AutoExtendPlugin
     - hyde.ext.plugins.syntext.SyntextPlugin
+    - hyde.ext.plugins.sorter.SorterPlugin
+    - hyde.ext.plugins.grouper.GrouperPlugin
+    - hyde.ext.plugins.tagger.TaggerPlugin
+meta:
+    nodemeta: meta.yaml
+
+sorter:
+    name:
+        attr: name
+        filters:
+            source_file.kind: html
+    index:
+        attr: meta.index
+    date:
+        attr: meta.date
+
+grouper:
+    project:
+        sorter: index
+        description: Projects
+        groups:
+            - name: gate
+              description: Gate
+            - name: netblocks
+              description: NetBlocks
+
+tagger:
+    sorter: name
+
 context:
     data:
+        website:
+            title: court-jus.net
+            version: 1.0alpha
         author:
             name: Ghislain Lévêque
             url: "http://court-jus.net"
@@ -16,11 +48,11 @@ context:
             url: "http://ringce.com/hyde"
         menu:
           - title: Home
-            url: /index.html
+            url: index.html
           - title: Gate
-            url: /Gate/
+            url: Gate/index.html
           - title: Netblocks
-            url: /netblocks.html
+            url: netblocks.html
         socialmenu:
           - title: Twitter
             url: "http://twitter.com/#!/court_jus"

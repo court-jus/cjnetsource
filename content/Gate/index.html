@@ -1,6 +1,3 @@
-{% extends "base.j2" %}
-
-{% block content %}
 Gate
 ====
 
@@ -9,8 +6,15 @@ About
 
 My project is to create an OpenSource and Free game inspired by [Portal][portal]
 
-* [News (last : 2011-10-26)][news]
-* [Media][media]
+{% for grp, res_walker in site.content.walk_project_groups() %}
+{% if grp.name == resource.meta.project %}
+{% for res in res_walker %}
+{% if res.meta.index > 0 %}
+  * [{{ res.meta.title|default(res.slug)|capitalize|replace('-', ' ') }}]({{ res.full_url }})
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
 * [Documentations][docs]
 * [Forum][forum]
 
@@ -27,4 +31,3 @@ You'll need Panda3D to run the program. I'm using the .deb version on my Ubuntu.
 [media]: /Gate/media.html
 [docs]: http://gate.rtfd.org
 [forum]: http://groups.google.com/group/gategame
-{% endblock %}

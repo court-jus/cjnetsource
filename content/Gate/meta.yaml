@@ -1,0 +1,6 @@
+extends: base.j2
+title_ending: " - Gate"
+default_block: content
+tags:
+    - gate
+project: gate
