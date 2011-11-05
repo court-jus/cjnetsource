@@ -21,6 +21,7 @@ sorter:
         attr: meta.index
     date:
         attr: meta.date
+        reverse: true
 
 grouper:
     project:

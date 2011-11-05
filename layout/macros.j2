@@ -1,3 +1,14 @@
+{% macro render_excerpt(res, class=None) %}
+{% refer to res.url as post %}
+<article {{'class='~class if class }}>
+<h3><a href="{{ content_url(res.url) }}">{{ res.meta.date }} - {{ res.meta.title|default(res.slug) }}</a></h3>
+{% if post.image %}
+<a href="{{ content_url(res.url) }}">{{ post.image|markdown|typogrify }}</a>
+{% endif %}
+{{ post.excerpt|markdown|typogrify }}
+</article>
+{% endmacro %}
+
 {% macro render_main_menu() -%}
 <ul>
 {% for menu_item in menu -%}
