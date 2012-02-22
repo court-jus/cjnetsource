@@ -1,0 +1,21 @@
+---
+index: 30
+title: News
+---
+News
+====
+
+{% from "macros.j2" import render_excerpt with context %}
+
+{% set latest = resource.node.walk_resources_sorted_by_date()|first %}
+{% for res in resource.node.walk_resources_sorted_by_date() %}
+{% if res.meta.date %}
+{% if res == latest %}
+{{ render_excerpt(res, 'post') }}
+{% else %}
+<h3><a href="{{ content_url(res.url) }}">{{ res.meta.date }} - {{ res.meta.title|default(res.slug) }}</a></h3>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+[play]: http://court-jus.github.com/TMatch/

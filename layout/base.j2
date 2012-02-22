@@ -25,6 +25,7 @@
 
 </script>
 <!-- End Google Analytics -->
+            {% block extra_head %}{% endblock %}
     </head>
     <body>
         <header>
@@ -46,6 +47,7 @@
         <div id="social">
             {% from "macros.j2" import render_social with context %}
             {{ render_social() }}
+            {% block extra_social %}{% endblock %}
         </div>
         <nav>
         {# Move main menu rendering away from the base layout. This

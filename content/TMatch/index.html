@@ -1,0 +1,25 @@
+TMatch
+======
+
+About
+-----
+
+This is a "match-three" type puzzle game.
+
+{% for grp, res_walker in site.content.walk_project_groups() %}
+{% if grp.name == resource.meta.project %}
+{% for res in res_walker %}
+  * [{{ res.meta.title|default(res.slug)|capitalize|replace('-', ' ') }}]({{ res.full_url }})
+{% endfor %}
+{% endif %}
+{% endfor %}
+* [Play][play]
+* [Ideas Tracker][tracker]
+
+Status
+------
+
+The last version [Gamma Grumpf][play] is available and playable online.
+
+[play]: http://court-jus.github.com/TMatch/
+[tracker]: https://www.pivotaltracker.com/projects/483823

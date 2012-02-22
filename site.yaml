@@ -32,6 +32,8 @@ grouper:
               description: Gate
             - name: netblocks
               description: NetBlocks
+            - name: tmatch
+              description: TMatch
 
 tagger:
     sorter: name
@@ -54,6 +56,8 @@ context:
             url: Gate/index.html
           - title: Netblocks
             url: netblocks.html
+          - title: TMatch
+            url: TMatch/index.html
         socialmenu:
           - title: Twitter
             url: "http://twitter.com/#!/court_jus"
