@@ -1,5 +1,5 @@
 extends: tmatch.j2
-title_ending: " - TMatch"
+title_ending: " - Triple Match"
 default_block: content
 tags:
     - tmatch
