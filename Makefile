@@ -1,3 +1,5 @@
+all: gen
+
 gen:
 	hyde -s . gen -d ../court-jus.github.com
 

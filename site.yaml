@@ -59,6 +59,9 @@ context:
           - title: Triple Match
             url: TripleMatch/index.html
         socialmenu:
+          - title: Boardgame Geek
+            url: "http://boardgamegeek.com/user/courtjus"
+            img: img/bgg-logo.png
           - title: Twitter
             url: "http://twitter.com/#!/court_jus"
             img: img/twitter-logo.png
