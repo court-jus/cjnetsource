@@ -32,7 +32,7 @@ grouper:
               description: Gate
             - name: netblocks
               description: NetBlocks
-            - name: tmatch
+            - name: triplematch
               description: Triple Match
 
 tagger:
